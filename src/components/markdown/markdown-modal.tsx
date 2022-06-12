@@ -1,7 +1,9 @@
 import React, {useState} from 'react';
-import { Button, Modal, TextInput } from '..';
 import { Content } from './models';
 import styled from 'styled-components';
+import { Button } from '../button';
+import { Modal } from '../modal';
+import { TextInput } from '../text-input';
 
 interface Props {
     open: boolean;

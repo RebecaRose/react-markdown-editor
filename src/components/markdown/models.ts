@@ -1,6 +1,7 @@
+import { IconTypes } from "../icon/icon.types";
 
 export interface MarkdownItem {
-    icon: string;
+    icon: IconTypes;
     name: string;
     text?: string;
     type: 'start-end' | 'start-only' | 'single-block' | 'other';

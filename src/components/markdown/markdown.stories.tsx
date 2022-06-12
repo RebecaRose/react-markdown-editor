@@ -12,8 +12,7 @@ export default {
 
 const Template: Story<MarkdownEditorProps> = (args) => <MarkdownEditor {...args} />;
 
-export const Teste = Template.bind({});
-Teste.args = {
-    showOnly: true,
-    value: 'Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.',
+export const Example = Template.bind({});
+Example.args = {
+    value: '# Hello World',
 };

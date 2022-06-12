@@ -6,9 +6,26 @@ export const Container = styled.div`
     flex-direction: column;
     margin-top: 10px;
     padding: 10px;
+    font-family: sans-serif;
 
     &:focus{
         border: 2px solid #51bbf6;
+    }
+
+    pre {
+        background: #f3f3f3;
+        border-radius: 3px;
+        padding: 10px;
+    }
+
+    blockquote {
+        margin: 0px;
+        background: #f3f3f3;
+        border-radius: 2px;
+        border-left: 5px solid #c1bdbd;
+        p {
+            padding: 5px 5px 5px 15px;
+        }
     }
 `;
 
@@ -49,7 +66,7 @@ export const Editor = styled.div`
 export const ShowMarkdown = styled.div`
     flex: 1;
     border-radius: 0;
-    padding-left: 2px;
+    padding: 10px;
 
     img {
         width: 100%;

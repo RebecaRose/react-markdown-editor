@@ -1,6 +1,4 @@
-import { IconButton, TextArea } from '..';
 import React from 'react';
-import marked from 'marked';
 import MarkdownModal from './markdown-modal';
 import { Content } from './models';
 import { Container, MarkdownContent, ShowMarkdown, AppBar, StyledMarkdownEditor, Editor } from './styled-markdown';
@@ -8,11 +6,14 @@ import { getItems, toggleMarkdown, onContinueMarkdownModal, insertMarkdown } fro
 import { useState } from 'react';
 import { MarkdownEditorProps } from './markdown.types';
 import { MarkdownModal as ModalType, MarkdownItem, Selected } from './models';
+import { IconButton } from '../icon-button';
+import { TextArea } from '../text-area';
+const marked = require('marked');
 
 export const MarkdownEditor = (props: MarkdownEditorProps) => {
     const [value, setValue] = useState('');
     const [isModalOpen, setIsModalOpen] = useState(false);
-    const [modalItem, setModalItem] = useState<Content>();
+    const [modalItem, setModalItem] = useState<any>();
     const [modalContent, setModalContent] = useState<Content[]>([]);
     const [selectedValue, setSelectedValue] = useState('');
     const [selectedStart, setSelectedStart] = useState(0);
@@ -58,7 +59,7 @@ export const MarkdownEditor = (props: MarkdownEditorProps) => {
         setModalItem(item);
     }
 
-    const updateSelected = (e: { target: { value: string, selectionStart: number, selectionEnd: number } }) => {
+    const updateSelected = (e: any) => {
         const start = e.target.selectionStart;
         const end = e.target.selectionEnd;
         const value = e.target.value.substring(start, end);
