@@ -5,7 +5,7 @@ import { MarkdownEditor } from './index';
 import { MarkdownEditorProps } from "./markdown.types"
 
 export default {
-    title: 'Components/MarkdownEditor',
+    title: 'MarkdownEditor',
     component: MarkdownEditor,
     argTypes: {},
 } as Meta<typeof MarkdownEditor>;
@@ -14,5 +14,5 @@ const Template: Story<MarkdownEditorProps> = (args) => <MarkdownEditor {...args}
 
 export const Example = Template.bind({});
 Example.args = {
-    value: '# Hello World',
+    value: '',
 };
