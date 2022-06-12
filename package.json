@@ -1,9 +1,10 @@
 {
-  "name": "react-markdown-editor",
-  "version": "0.1.0",
+  "name": "@rebecarose/react-markdown-editor",
+  "version": "0.1.2",
   "description": "React component for markdown editor",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
+  "types": "dist/index.d.ts",
   "author": "Rebeca Rose",
   "license": "MIT",
   "scripts": {
